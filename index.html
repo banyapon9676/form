@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row ">
+      <div class="col-sm">
+        <img src="logoแม่โจ้.png" alt="MJU logo" style="width: 6em;">
+      </div>
+      <div class="col-sm">
+        <h2>คำร้องขอลาพักการศึกษา</h>
+          <p class="text-center" style="font-size: 13px;">(สําหรับนักศึกษาที่ได้ศึกษามาแล้ว ไม่น้อยกว่าหนึ่งภาคการศึกษา)</p>
+      </div>
+      <div class="col-sm">
+      </div>
+    </div>
+  </div>
+  
+  <form>
+    <div class="container">
+      <div class="form-row">
+        <div class="col-md-3 mb-3">
+          <label for="validationServerUsername">วันเดือนปีที่กรอก</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend3">วันเดือนปี</span>
+            </div>
+            <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+              required>
+          </div>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="validationTooltip04" class="form-label">ขอลาพักการศึกษา</label>
+          <select class="custom-select " id="validationServer04" required>
+            <option selected disabled value="">ภาคเรียนที่...</option>
+            <option>1</option>
+            <option>2</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="validationTooltip04" class="form-label">ปีการศึกษา</label>
+          <input type="text" class="form-control " id="validationServer01" step="1" maxlength="4"
+            onKeyUp="if(isNaN(this.value)){ alert('โปรดใส่ตัวเลข'); this.value='';}" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationTooltip04" class="form-label">คณะบดี</label>
+          <select class="custom-select " id="validationServer04" required>
+            <option selected disabled value="">คณะ...</option>
+            <option>วิทยาศาสตร์</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-1 mb-3">
+          <label for="validationTooltip04" class="form-label">คำนำหน้า</label>
+          <select class="custom-select " id="validationServer04" required>
+            <option>นาย</option>
+            <option>นางสาว</option>
+            <option>นาง</option>
+          </select>
+        </div>
+        <div class="col-md-5 mb-3">
+          <label for="validationServer01">ชื่อ</label>
+          <input type="text" class="form-control " id="validationServer01" value="" placeholder="ชื่อ..." maxlength="50"
+            onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+        </div>
+        <div class="invalid-tooltip">dfsdfsdfs</div>
+        <div class="col-md-5 mb-3">
+          <label for="validationServer02">นามสกุล</label>
+          <input type="text" class="form-control " id="validationServer02" placeholder="นามสกุล..." maxlength="50"
+            value="" onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่นามสกุลเป็นตัวอักษร'); this.value='';}" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-5 mb-3">
+          <label for="validationServer03">รหัสนักศึกษา (10หลัก)</label>
+          <input type="text" class="form-control" placeholder="รหัสนักศึกษา..." id="validationServer03" maxlength="10"
+            onKeyUp="if(isNaN(this.value)){ alert('โปรดใส่รหัสนักศึกษา 10 หลัก'); this.value='';}" required>
+        </div>
+        <div class="col-md-5 mb-3">
+          <label for="validationServer03">โทรศัพท์มือถือ (10หลัก) </label>
+          <input type="text" class="form-control" id="validationServer03" placeholder="เบอร์โทรศัพท์มือถือ..."
+            maxlength="10" onKeyUp="if(isNaN(this.value)){ alert('โปรดใส่รหัสนักศึกษา 10 หลัก'); this.value='';}"
+            required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationTooltip04" class="form-label">หลักสูตรปริญญาตรี</label>
+          <select class="custom-select " id="validationServer04" required>
+            <option>4 – 5 ปี</option>
+            <option>4 ปีเทียบเข้าเรียน(2ปี)</option>
+          </select>
+        </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip04" class="form-label">ภาคการศึกษา</label>
+            <select class="custom-select " id="validationServer04" required>
+              <option selected disabled value="">ภาค...</option>
+              <option>ภาคปกติ</option>
+              <option>ภาคสมทบ</option>
+            </select>
+          </div>
+      </div>
+    
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationServer01">คณะ</label>
+        <select class="custom-select " id="validationServer04" required>
+          <option selected disabled value="">คณะ...</option>
+          <option>....</option>
+        </select>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationServer02">สาขา</label>
+        <select class="custom-select " id="validationServer04" required>
+          <option selected disabled value="">สาขา...</option>
+          <option>....</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationServer02">มีความประสงค์จะขอลาพักการศึกษา เนื่องจาก</label>
+        <textarea class="form-control" placeholder="เนื่องจาก" id="floatingTextarea2" style="height: 100px"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+    </div>
+    <button class="btn btn-primary" type="submit">ตกลง</button>
+    </div>
+  </form>
+
+
+
+</body>
+
+</html>

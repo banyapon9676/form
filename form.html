@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>มจท.10</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> -->
+    <link href="css/gdg.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                <img src="https://upload.wikimedia.org/wikipedia/th/4/43/%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B9%82%E0%B8%88%E0%B9%89_edit.png"
+                    alt="alternatetext" style="width:80px;height:80px;">
+                <p align="center">คําร้องขอลาพักการศึกษา</p>
+            </h1>
+            <p class="subtitle">
+
+            </p><label for="start">วัน/เดือน/ปีที่กรอก:</label>
+            <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31">
+            <p> <b>เรื่อง</b> ขอลาพักการศึกษา &nbsp;ในภาคเรียน
+                <label class="radio">
+                    <input type="radio" name="answer">
+                    1
+                </label>
+                <label class="radio">
+                    <input type="radio" name="answer">
+                    2
+                </label>
+                <input type="text" placeholder="ปีการศึกษา" maxlength="4" name="text_plain"
+                    onKeyUp="if(isNaN(this.value)){ alert('ปีการศึกษาพ่อมึงเขียนตัวอักษรได้'); this.value='';}" />
+            </p>
+            <p><b>เรียน</b> คณะบดีคณะ
+            <div class="field">
+                <select>
+                    <option value="---เลือกคณะ---">---เลือกคณะ---</option>
+                    <optgroup label="คณะ">
+                        <option value="คณะผลิตกรรมการเกษตร">คณะผลิตกรรมการเกษตร</option>
+                        <option value="คณะสัตวศาสตร์และเทคโนโลยี">คณะสัตวศาสตร์และเทคโนโลยี</option>
+                        <option value="คณะสถาปัตยกรรมและการออกแบบสิ่งแวดล้อม">คณะสถาปัตยกรรมและการออกแบบสิ่งแวดล้อม
+                        </option>
+                        <option value="คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ">คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ
+                        </option>
+                        <option value="คณะบริหารธุรกิจ">คณะบริหารธุรกิจ</option>
+                        <option value="คณะเศรษฐศาสตร์">คณะเศรษฐศาสตร์</option>
+                        <option value="คณะสารสนเทศและการสื่อสาร">คณะสารสนเทศและการสื่อสาร</option>
+                        <option value="คณะวิศวกรรมและอุตสาหกรรมเกษตร">คณะวิศวกรรมและอุตสาหกรรมเกษตร</option>
+                        <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
+                        <option value="คณะศิลปศาสตร์">คณะศิลปศาสตร์</option>
+                        <option value="คณะพัฒนาการท่องเที่ยว">คณะพัฒนาการท่องเที่ยว</option>
+                        <option value="วิทยาลัยบริหารศาสตร์">วิทยาลัยบริหารศาสตร์</option>
+                        <option value="วิทยาลัยพลังงานทดแทน">พลังงานทดแทน</option>
+                        <option value="แม่โจ้-แพร่ เฉลิมพระเกียรติ">แม่โจ้-แพร่ เฉลิมพระเกียรติ </option>
+                        <option value="แม่โจ้-ชุมพร">แม่โจ้-ชุมพร</option>
+                </select>
+                </p>
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้าพเจ้า <label class="radio"></label>
+                    <input type="radio" name="answer">
+                    นาย
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="answer">
+                        นาง
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="answer">
+                        นางสาว
+                    </label>
+                    &nbsp; <input type="text" placeholder="ชื่อ" name="text_key" maxlength="50"
+                        onKeyUp="if(!(isNaN(this.value))) { alert('พิมพ์เลขหาพ่อมึงเหรอ'); this.value='';}" /> <input
+                        type="text" placeholder="ชื่อกลาง" maxlength="50" name="text_key"
+                        onKeyUp="if(!(isNaN(this.value))) { alert('มึงพิมพ์ดีๆไอ้ฝรั่ง'); this.value='';}" /> <input
+                        type="text" placeholder="นามสกุล" maxlength="50" name="text_key"
+                        onKeyUp="if(!(isNaN(this.value))) { alert('นามสกุลไม่มีไม่ต้องพิมพ์ตัวเลขไอ้หำ'); this.value='';}" />
+                </p>
+                <p>
+                    รหัสนักศึกษา (10หลัก) <input type="text" maxlength="10" name="text_plain"
+                        onKeyUp="if(isNaN(this.value)){ alert('ปีการศึกษาพ่อมึงเขียนตัวอักษรได้'); this.value='';}" />
+                    โทรศัพท์มือถือ (10หลัก) <input type="text" maxlength="10" name="text_plain"
+                        onKeyUp="if(isNaN(this.value)){ alert('ปีการศึกษาพ่อมึงเขียนตัวอักษรได้'); this.value='';}" />
+                </p>
+                </p>
+                <p>
+                    โปรดระบุหลักสูตรปริญญาตรี <label class="radio"></label>
+                    <input type="radio" name="answer">
+                    4 – 5 ปี
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="answer">
+                        4 ปีเทียบเข้าเรียน (2ปี)
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="answer">
+                        ภาคปกติ
+                    </label>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="answer">
+                        ภาคสมทบ
+                    </label>
+                </p>
+
+                <p>คณะ
+                <div class="field">
+                    <select>
+                        <option value="---เลือกคณะ---">---เลือกคณะ---</option>
+                        <optgroup label="คณะ">
+                            <option value="คณะผลิตกรรมการเกษตร">คณะผลิตกรรมการเกษตร</option>
+                            <option value="คณะสัตวศาสตร์และเทคโนโลยี">คณะสัตวศาสตร์และเทคโนโลยี</option>
+                            <option value="คณะสถาปัตยกรรมและการออกแบบสิ่งแวดล้อม">คณะสถาปัตยกรรมและการออกแบบสิ่งแวดล้อม
+                            </option>
+                            <option value="คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ">คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ
+                            </option>
+                            <option value="คณะบริหารธุรกิจ">คณะบริหารธุรกิจ</option>
+                            <option value="คณะเศรษฐศาสตร์">คณะเศรษฐศาสตร์</option>
+                            <option value="คณะสารสนเทศและการสื่อสาร">คณะสารสนเทศและการสื่อสาร</option>
+                            <option value="คณะวิศวกรรมและอุตสาหกรรมเกษตร">คณะวิศวกรรมและอุตสาหกรรมเกษตร</option>
+                            <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
+                            <option value="คณะศิลปศาสตร์">คณะศิลปศาสตร์</option>
+                            <option value="คณะพัฒนาการท่องเที่ยว">คณะพัฒนาการท่องเที่ยว</option>
+                            <option value="วิทยาลัยบริหารศาสตร์">วิทยาลัยบริหารศาสตร์</option>
+                            <option value="วิทยาลัยพลังงานทดแทน">พลังงานทดแทน</option>
+                            <option value="แม่โจ้-แพร่ เฉลิมพระเกียรติ">แม่โจ้-แพร่ เฉลิมพระเกียรติ </option>
+                            <option value="แม่โจ้-ชุมพร">แม่โจ้-ชุมพร</option>
+                    </select>
+                    <p>สาขา
+                    <div class="field">
+                        <select>
+                            <option value="---เลือกคณะ---">---เลือกคณะ---</option>
+                            <optgroup label="คณะ">
+                                <option value="คณะผลิตกรรมการเกษตร">คณะผลิตกรรมการเกษตร</option>
+                                <option value="คณะสัตวศาสตร์และเทคโนโลยี">คณะสัตวศาสตร์และเทคโนโลยี</option>
+                                <option value="คณะสถาปัตยกรรมและการออกแบบสิ่งแวดล้อม">
+                                    คณะสถาปัตยกรรมและการออกแบบสิ่งแวดล้อม</option>
+                                <option value="คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ">
+                                    คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ</option>
+                                <option value="คณะบริหารธุรกิจ">คณะบริหารธุรกิจ</option>
+                                <option value="คณะเศรษฐศาสตร์">คณะเศรษฐศาสตร์</option>
+                                <option value="คณะสารสนเทศและการสื่อสาร">คณะสารสนเทศและการสื่อสาร</option>
+                                <option value="คณะวิศวกรรมและอุตสาหกรรมเกษตร">คณะวิศวกรรมและอุตสาหกรรมเกษตร</option>
+                                <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
+                                <option value="คณะศิลปศาสตร์">คณะศิลปศาสตร์</option>
+                                <option value="คณะพัฒนาการท่องเที่ยว">คณะพัฒนาการท่องเที่ยว</option>
+                                <option value="วิทยาลัยบริหารศาสตร์">วิทยาลัยบริหารศาสตร์</option>
+                                <option value="วิทยาลัยพลังงานทดแทน">พลังงานทดแทน</option>
+                                <option value="แม่โจ้-แพร่ เฉลิมพระเกียรติ">แม่โจ้-แพร่ เฉลิมพระเกียรติ </option>
+                                <option value="แม่โจ้-ชุมพร">แม่โจ้-ชุมพร</option>
+                        </select>
+                        </p>
+
+
+                        มีความประสงค์จะขอลาพักการศึกษา เนื่องจาก<br />
+                        <textarea wrap="virtual" name="txt_comment" rows="6" cols="20"></textarea>
+                        <p>
+                        พร้อมนี้ได้แนบใบยินยอมขอลาพักการศึกษาจากผู้ปกครอง / ใบรับรองแพทย2 / เอกสารอื่นๆ</p>
+                        </p>
+                        
+                        </form>
+                        </p>
+                    </div>
+                    </p>
+                </div>
+    </section>
+</body>
+
+</html>
