@@ -4,154 +4,632 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>คำร้องขอลาพักการศึกษา</title>
+  <link rel="stylesheet" href="ind.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-  <div class="container">
-    <div class="row ">
-      <div class="col-sm">
-        <img src="logoแม่โจ้.png" alt="MJU logo" style="width: 6em;">
-      </div>
-      <div class="col-sm">
-        <h2>คำร้องขอลาพักการศึกษา</h>
-          <p class="text-center" style="font-size: 13px;">(สําหรับนักศึกษาที่ได้ศึกษามาแล้ว ไม่น้อยกว่าหนึ่งภาคการศึกษา)</p>
-      </div>
-      <div class="col-sm">
+  <section class="get_in_touch">
+    <h2 class="title">คำร้องขอลาพักการศึกษา</h2>
+    <div class="container">
+      <div class="row ">
+        <div class="col-sm">
+          <img src="logoแม่โจ้.png" alt="MJU logo" style="width: 6em;">
+        </div>
+        <div class="col-sm">
+
+          <p class="text-center" style="font-size: 13px;">(สําหรับนักศึกษาที่ได้ศึกษามาแล้ว ไม่น้อยกว่าหนึ่งภาคการศึกษา)
+          </p>
+        </div>
+        <div class="col-sm">
+        </div>
       </div>
     </div>
-  </div>
-  
-  <form>
-    <div class="container">
-      <div class="form-row">
-        <div class="col-md-3 mb-3">
-          <label for="validationServerUsername">วันเดือนปีที่กรอก</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroupPrepend3">วันเดือนปี</span>
+
+    <form>
+      <div class="container">
+        <div class="form-row">
+          <div class="col-md-3 mb-3">
+            <label for="validationServerUsername">วันเดือนปีที่กรอก</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend3">วันเดือนปี</span>
+              </div>
+              <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+                required>
             </div>
-            <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+          </div>
+          <div class="col-md-2 mb-3">
+            <label for="validationTooltip04" class="form-label">ขอลาพักการศึกษา</label>
+            <select class="custom-select " id="ภาคเรียนที่" required>
+              <option selected disabled value="">ภาคเรียนที่...</option>
+              <option>1</option>
+              <option>2</option>
+            </select>
+          </div>
+          <div class="col-md-2 mb-3">
+            <label for="validationTooltip04" class="form-label">ปีการศึกษา</label>
+            <input type="number" class="form-control " id="ปีการศึกษา" step="1" maxlength="4" max="2565" min="2543"
               required>
           </div>
         </div>
-        <div class="col-md-2 mb-3">
-          <label for="validationTooltip04" class="form-label">ขอลาพักการศึกษา</label>
-          <select class="custom-select " id="validationServer04" required>
-            <option selected disabled value="">ภาคเรียนที่...</option>
-            <option>1</option>
-            <option>2</option>
-          </select>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip04" class="form-label">คณะบดี</label>
+            <select class="custom-select " id="คณะบดีคณะ" required>
+              <option selected disabled value="">คณะ...</option>
+              <option>วิทยาศาสตร์</option>
+            </select>
+          </div>
         </div>
-        <div class="col-md-2 mb-3">
-          <label for="validationTooltip04" class="form-label">ปีการศึกษา</label>
-          <input type="text" class="form-control " id="validationServer01" step="1" maxlength="4"
-            onKeyUp="if(isNaN(this.value)){ alert('โปรดใส่ตัวเลข'); this.value='';}" required>
+        <div class="form-row">
+          <div class="col-md-1 mb-3">
+            <label for="validationTooltip04" class="form-label">คำนำหน้า</label>
+            <select class="custom-select " id="คำนำหน้า" required>
+              <option>นาย</option>
+              <option>นางสาว</option>
+              <option>นาง</option>
+            </select>
+          </div>
+          <div class="col-md-5 mb-3">
+            <label for="validationServer01">ชื่อ</label>
+            <input type="text" class="form-control " id="ชื่อ" value="" placeholder="ชื่อ..." maxlength="50"
+              onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+          </div>
+          <div class="invalid-tooltip"></div>
+          <div class="col-md-5 mb-3">
+            <label for="validationServer02">นามสกุล</label>
+            <input type="text" class="form-control " id="นามสกุล" placeholder="นามสกุล..." maxlength="50" value=""
+              onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่นามสกุลเป็นตัวอักษร'); this.value='';}" required>
+          </div>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="validationTooltip04" class="form-label">คณะบดี</label>
-          <select class="custom-select " id="validationServer04" required>
-            <option selected disabled value="">คณะ...</option>
-            <option>วิทยาศาสตร์</option>
-          </select>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationServer03">รหัสนักศึกษา (10หลัก)</label>
+            <input type="text" class="form-control" placeholder="รหัสนักศึกษา..." id="รหัสนักศึกษา" maxlength="10"
+              onKeyUp="if(isNaN(this.value)){ alert('โปรดใส่รหัสนักศึกษา 10 หลัก'); this.value='';}" required>
+          </div>
+          <div class="col-md-5 mb-3">
+            <label for="validationServer03">โทรศัพท์มือถือ (10หลัก) </label>
+            <input type="text" class="form-control" id="โทรศัพท์มือถือ" placeholder="เบอร์โทรศัพท์มือถือ..."
+              maxlength="10" onKeyUp="if(isNaN(this.value)){ alert('โปรดใส่รหัสนักศึกษา 10 หลัก'); this.value='';}"
+              required>
+          </div>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-1 mb-3">
-          <label for="validationTooltip04" class="form-label">คำนำหน้า</label>
-          <select class="custom-select " id="validationServer04" required>
-            <option>นาย</option>
-            <option>นางสาว</option>
-            <option>นาง</option>
-          </select>
-        </div>
-        <div class="col-md-5 mb-3">
-          <label for="validationServer01">ชื่อ</label>
-          <input type="text" class="form-control " id="validationServer01" value="" placeholder="ชื่อ..." maxlength="50"
-            onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
-        </div>
-        <div class="invalid-tooltip">dfsdfsdfs</div>
-        <div class="col-md-5 mb-3">
-          <label for="validationServer02">นามสกุล</label>
-          <input type="text" class="form-control " id="validationServer02" placeholder="นามสกุล..." maxlength="50"
-            value="" onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่นามสกุลเป็นตัวอักษร'); this.value='';}" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-5 mb-3">
-          <label for="validationServer03">รหัสนักศึกษา (10หลัก)</label>
-          <input type="text" class="form-control" placeholder="รหัสนักศึกษา..." id="validationServer03" maxlength="10"
-            onKeyUp="if(isNaN(this.value)){ alert('โปรดใส่รหัสนักศึกษา 10 หลัก'); this.value='';}" required>
-        </div>
-        <div class="col-md-5 mb-3">
-          <label for="validationServer03">โทรศัพท์มือถือ (10หลัก) </label>
-          <input type="text" class="form-control" id="validationServer03" placeholder="เบอร์โทรศัพท์มือถือ..."
-            maxlength="10" onKeyUp="if(isNaN(this.value)){ alert('โปรดใส่รหัสนักศึกษา 10 หลัก'); this.value='';}"
-            required>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="validationTooltip04" class="form-label">หลักสูตรปริญญาตรี</label>
-          <select class="custom-select " id="validationServer04" required>
-            <option>4 – 5 ปี</option>
-            <option>4 ปีเทียบเข้าเรียน(2ปี)</option>
-          </select>
-        </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip04" class="form-label">หลักสูตรปริญญาตรี</label>
+            <select class="custom-select " id="หลักสูตรปริญญาตรี" required>
+              <option>4 – 5 ปี</option>
+              <option>4 ปีเทียบเข้าเรียน(2ปี)</option>
+            </select>
+          </div>
           <div class="col-md-4 mb-3">
             <label for="validationTooltip04" class="form-label">ภาคการศึกษา</label>
-            <select class="custom-select " id="validationServer04" required>
+            <select class="custom-select " id="ภาคการศึกษา" required>
               <option selected disabled value="">ภาค...</option>
               <option>ภาคปกติ</option>
               <option>ภาคสมทบ</option>
             </select>
           </div>
-      </div>
-    
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label for="validationServer01">คณะ</label>
-        <select class="custom-select " id="validationServer04" required>
-          <option selected disabled value="">คณะ...</option>
-          <option>....</option>
-        </select>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationServer02">สาขา</label>
-        <select class="custom-select " id="validationServer04" required>
-          <option selected disabled value="">สาขา...</option>
-          <option>....</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label for="validationServer02">มีความประสงค์จะขอลาพักการศึกษา เนื่องจาก</label>
-        <textarea class="form-control" placeholder="เนื่องจาก" id="floatingTextarea2" style="height: 100px"></textarea>
-      </div>
-    </div>
-    <div class="form-group">
-    </div>
-    <button class="btn btn-primary" type="submit">ตกลง</button>
-    </div>
-  </form>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationServer01">คณะ</label>
+            <select class="custom-select " id="คณะ" required>
+              <option selected disabled value="">คณะ...</option>
+              <option>....</option>
+            </select>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationServer02">สาขา</label>
+            <select class="custom-select " id="สาขา" required>
+              <option selected disabled value="">สาขา...</option>
+              <option>....</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationServer02">มีความประสงค์จะขอลาพักการศึกษา เนื่องจาก</label>
+            <textarea class="form-control" placeholder="เนื่องจาก" id="เนื่องจาก" style="height: 100px"
+              required></textarea>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="formFile" class="form-label">อัปโหลดลายเซ็น</label>
+            <input class="form-control" type="file" id="FileSignature" >
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-7 mb-3">
+            <p class="text-center" style="font-size: 17px;">พร้อมนี้ได้แนบใบยินยอมขอลาพักการศึกษาจากผู้ปกครอง /
+              ใบรับรองแพทย์ / เอกสารอื่นๆ</p>
+          </div>
+        </div>
+        <!-- ส่วนตาราง -->
+        <!-- ส่วนตารางrow1 -->
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <center>
+                <div class="card-body">
+                  <p class="text" style="font-size: 17px;">(2) ความเห็นหัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ</p>
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                  <label class="form-check-label-center" for="exampleCheck1">ทราบ
+                    นักศึกษาดังกล่าวสามารถลาพักการศึกษาได้</label>
+                  <div class="col-sm-24">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input"
+                        required>
+                      <label class="custom-control-label" for="customRadioInline1">ภาคเรียนที่ 1 </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input"
+                        required>
+                      <label class="custom-control-label" for="customRadioInline2">ภาคเรียนที่ 2 </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="validationServer01">หัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ</label>
+                    <input type="text" class="form-control " id="ชื่อ" value="" placeholder="ชื่อ..." maxlength="50"
+                      onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="formFile" class="form-label">อัปโหลดลายเซ็น</label>
+                    <input class="form-control" type="file" id="FileSignature" >
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="start">วัน/เดือน/ปีที่กรอก:</label>
+                    <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+                      required>
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <center>
+                <div class="card-body">
+                  <p class="text" style="font-size: 17px;">(3) ความเห็นผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ</p>
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                  <label class="form-check-label-center" for="exampleCheck1">ทราบ
+                    นักศึกษาดังกล่าวสามารถลาพักการศึกษาได้</label>
+                  <div class="col-sm-6">
+
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="validationServer01">ผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ</label>
+                    <input type="text" class="form-control " id="ชื่อ" value="" placeholder="ชื่อ..." maxlength="50"
+                      onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="formFile" class="form-label">อัปโหลดลายเซ็น</label>
+                    <input class="form-control" type="file" id="FileSignature" >
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="start">วัน/เดือน/ปีที่กรอก:</label>
+                    <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+                      required>
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+        </div>
+        <!-- ส่วนตารางrow2 -->
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <center>
+                <div class="card-body">
+                  <p class="text" style="font-size: 17px;">(4) ความเห็นอาจารย์ที่ปรึกษา</p>
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                  <label class="form-check-label-center" for="exampleCheck1">ทราบ
+                  </label>
+
+                  <div class="col-sm-9">
+                    <label for="validationServer01">อาจารย์ปรึกษา</label>
+                    <input type="text" class="form-control " id="ชื่อ" value="" placeholder="ชื่อ..." maxlength="50"
+                      onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="formFile" class="form-label">อัปโหลดลายเซ็น</label>
+                    <input class="form-control" type="file" id="FileSignature" >
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="start">วัน/เดือน/ปีที่กรอก:</label>
+                    <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+                      required>
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <center>
+                <div class="card-body">
+                  <p class="text" style="font-size: 17px;">(5) ความเห็นประธานคณะกรรมการประจําหลักสูตร</p>
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                  <label class="form-check-label-center" for="exampleCheck1">ทราบ
+                  </label>
+                  <div class="col-sm-6">
+
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="validationServer01">ประธานคณะกรรมการประจําหลักสูตร</label>
+                    <input type="text" class="form-control " id="ชื่อ" value="" placeholder="ชื่อ..." maxlength="50"
+                      onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="formFile" class="form-label">อัปโหลดลายเซ็น</label>
+                    <input class="form-control" type="file" id="FileSignature" >
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="start">วัน/เดือน/ปีที่กรอก:</label>
+                    <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+                      required>
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+        </div>
+        <!-- ส่วนตารางrow3 -->
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <center>
+                <div class="card-body">
+                  <p class="text" style="font-size: 17px;">(6) ความเห็นคณบดี</p>
+
+                  <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">อนุมัติ</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">ไม่อนุมัติ</label>
+                  </div>
+                </div>
+                  <div class="col-sm-9">
+                    <label for="validationServer01">คณบดี</label>
+                    <input type="text" class="form-control " id="ชื่อ" value="" placeholder="ชื่อ..." maxlength="50"
+                      onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="formFile" class="form-label">อัปโหลดลายเซ็น</label>
+                    <input class="form-control" type="file" id="FileSignature" >
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="start">วัน/เดือน/ปีที่กรอก:</label>
+                    <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+                      required>
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <center>
+                <div class="card-body">
+                  <p class="text" style="font-size: 17px;">(7) งานเงินรายได้ กองคลัง ชั้น 2 อาคารอิงคศรีกสิการ</p>
+
+                  <div class="col-sm-12">
+                    <input type="radio" name="answer">ภาคเรียนที่ 1 1,200 บาท </label><input type="radio" name="answer">ภาคเรียนที่ 2 1,000 บาท </label>
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="validationServer01">ผู้รับเงิน</label>
+                    <input type="text" class="form-control " id="ชื่อ" value="" placeholder="ชื่อ..." maxlength="50"
+                      onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="formFile" class="form-label">อัปโหลดลายเซ็น</label>
+                    <input class="form-control" type="file" id="FileSignature" >
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="start">วัน/เดือน/ปีที่กรอก:</label>
+                    <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+                      required>
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+        </div>
+        <!-- ส่วนตารางrow4 -->
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <p class="text" style="font-size: 19px;">(8) ส่งเอกสารคําร้องขอลาพักการศึกษาตัวจริง</p>
+                ให้กลุ่มภารกิจ
+                ทะเบียนฯ ชั้น 2 อาคารอํานวย ยศสุข เพื่อบันทึกคําร้องขอลาพัก
+                การศึกษา และให้นักศึกษาเก็บหลักฐานใบเสร็จที่ชําระเงินไว้
+                เพื่อตรวจสอบการบันทึกการลาพักการศึกษา
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <p class="text" style="font-size: 17px;">(9) สําหรับเจ้าหน้าที่บันทึกลงฐานข้อมูล ได้บันทึกการข้อมูล
+                  ดังกล่าว </p>
+                <center>
+                  <div class="col-sm-6">
+                    <label for="start">ใน วัน/เดือน/ปีที่:</label>
+                    <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+                      required>
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="validationServer01">เจ้าหน้าที่บันทึกลงฐานข้อมูล</label>
+                    <input type="text" class="form-control " id="ชื่อ" value="" placeholder="ชื่อ..." maxlength="50"
+                      onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="formFile" class="form-label">อัปโหลดลายเซ็น</label>
+                    <input class="form-control" type="file" id="FileSignature" >
+                  </div>
+                  <div class="col-sm-9">
+                    <label for="start">วัน/เดือน/ปีที่กรอก:</label>
+                    <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+                      required>
+                  </div>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ส่วนตารางจบ -->
+
+
+        <!-- ส่วนผู้ปกครอง -->
+        <div class="container">
+          <div class="row ">
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+
+              <p class="text-center" style="font-size: 30px;">คํารับรองของผู้ปกครอง
+              </p>
+            </div>
+            <div class="col-sm">
+            </div>
+          </div>
+        </div>
+
+        <form>
+
+          <div class="form-row">
+            <div class="col-md-1 mb-3">
+              <label for="validationServer01">บ้านเลขที่</label>
+              <input type="text" class="form-control " id="นามสกุล" placeholder="เลขที่..." maxlength="50" value=""
+                required>
+            </div>
+            <div class="col-md-1 mb-3">
+              <label for="validationServer01">หมู่ที่</label>
+              <input type="text" class="form-control " id="นามสกุล" placeholder="หมู่ที่..." maxlength="50" value=""
+                required>
+            </div>
+            <div class="col-md-1 mb-3">
+              <label for="validationServer01">ตําบล</label>
+              <input type="text" class="form-control " id="นามสกุล" placeholder="ตําบลที่..." maxlength="50" value=""
+                required>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationServer01">อำเภอ</label>
+              <input type="text" class="form-control " id="นามสกุล" placeholder="อำเภอ..." maxlength="50" value=""
+                required>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationServer01">จังหวัด</label>
+              <input type="text" class="form-control " id="นามสกุล" placeholder="จังหวัด..." maxlength="50" value=""
+                required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-3 mb-3">
+              <label for="validationServer01">รหัสไปรษณีย์</label>
+              <input type="text" class="form-control " id="รหัสไปรษณีย์" placeholder="รหัสไปรษณีย์..." maxlength="5"
+                value="" required>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationServer01">โทรศัพท์</label>
+              <input type="text" class="form-control " id="เบอร์โทรศัพท์มือถือ" placeholder="เบอร์..." maxlength="10"
+                value="" required>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationServerUsername">วันเดือนปีที่กรอก</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend3">วันเดือนปี</span>
+                </div>
+                <input type="date" id="start" name="trip-start" value="2020-012-21" min="2020-01-01" max="20-12-31"
+                  required>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+
+            <div class="col-md-4 mb-3">
+              <label for="validationTooltip04" class="form-label">ยินยอมให้นักศึกษาลาพักการศึกษา ในภาคเรียนที่</label>
+              <select class="custom-select " id="ภาคเรียนที่" required>
+                <option selected disabled value="">ภาคเรียนที่...</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+            <div class="col-md-2 mb-3">
+              <label for="validationTooltip04" class="form-label">ปีการศึกษา</label>
+              <input type="number" class="form-control " id="ปีการศึกษา" step="1" maxlength="4" max="2565" min="2543"
+                required>
+            </div>
+
+          </div>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationTooltip04" class="form-label">คณะบดี</label>
+              <select class="custom-select " id="คณะบดีคณะ" required>
+                <option selected disabled value="">คณะ...</option>
+                <option>วิทยาศาสตร์</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-1 mb-3">
+              <label for="validationTooltip04" class="form-label">คำนำหน้า</label>
+              <select class="custom-select " id="คำนำหน้า" required>
+                <option>นาย</option>
+                <option>นางสาว</option>
+                <option>นาง</option>
+              </select>
+            </div>
+            <div class="col-md-5 mb-3">
+              <label for="validationServer01">ชื่อนักศึกษา</label>
+              <input type="text" class="form-control " id="ชื่อ" value="" placeholder="ชื่อ..." maxlength="50"
+                onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+            </div>
+
+            <div class="col-md-5 mb-3">
+              <label for="validationServer02">นามสกุล</label>
+              <input type="text" class="form-control " id="นามสกุล" placeholder="นามสกุล..." maxlength="50" value=""
+                onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่นามสกุลเป็นตัวอักษร'); this.value='';}" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationServer03">รหัสนักศึกษา (10หลัก)</label>
+              <input type="text" class="form-control" placeholder="รหัสนักศึกษา..." id="รหัสนักศึกษา" maxlength="10"
+                onKeyUp="if(isNaN(this.value)){ alert('โปรดใส่รหัสนักศึกษา 10 หลัก'); this.value='';}" required>
+            </div>
+            <div class="col-md-5 mb-3">
+              <label for="validationServer03">โทรศัพท์มือถือ (10หลัก) </label>
+              <input type="text" class="form-control" id="โทรศัพท์มือถือ" placeholder="เบอร์โทรศัพท์มือถือ..."
+                maxlength="10" onKeyUp="if(isNaN(this.value)){ alert('โปรดใส่รหัสนักศึกษา 10 หลัก'); this.value='';}"
+                required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationTooltip04" class="form-label">หลักสูตรปริญญาตรี</label>
+              <select class="custom-select " id="หลักสูตรปริญญาตรี" required>
+                <option>4 – 5 ปี</option>
+                <option>4 ปีเทียบเข้าเรียน(2ปี)</option>
+              </select>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationTooltip04" class="form-label">ภาคการศึกษา</label>
+              <select class="custom-select " id="ภาคการศึกษา" required>
+                <option selected disabled value="">ภาค...</option>
+                <option>ภาคปกติ</option>
+                <option>ภาคสมทบ</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationServer01">คณะ</label>
+              <select class="custom-select " id="คณะ" required>
+                <option selected disabled value="">คณะ...</option>
+                <option>....</option>
+              </select>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationServer02">สาขา</label>
+              <select class="custom-select " id="สาขา" required>
+                <option selected disabled value="">สาขา...</option>
+                <option>....</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-7 mb-3">
+              <label for="validationTooltip04" class="form-label">นักศึกษาในความปกครองของข้าพเจ้ามีความประสงค์จะขอลาพักการศึกษาในภาคเรียนที่</label>
+              <select class="custom-select " id="ภาคเรียนที่" required>
+                <option selected disabled value="">ภาคเรียนที่...</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+            <div class="col-md-2 mb-3">
+              <label for="validationTooltip04" class="form-label">ปีการศึกษา</label>
+              <input type="number" class="form-control " id="ปีการศึกษา" step="1" maxlength="4" max="2565" min="2543"
+                required>
+            </div>
+          </div>
+            <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationServer02">มีความประสงค์จะขอลาพักการศึกษา เนื่องจาก</label>
+              <textarea class="form-control" placeholder="เนื่องจาก" id="เนื่องจาก" style="height: 100px"
+                required></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-1 mb-3">
+              <label for="validationTooltip04" class="form-label">คำนำหน้า</label>
+              <select class="custom-select " id="คำนำหน้า" required>
+                <option>นาย</option>
+                <option>นางสาว</option>
+                <option>นาง</option>
+              </select>
+            </div>
+            <div class="col-md-5 mb-3">
+              <label for="validationServer01">ชื่อผู้ปกครอง</label>
+              <input type="text" class="form-control " id="ชื่อ" value="" placeholder="ชื่อผู้ปกครอง..." maxlength="50"
+                onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่ชื่อเป็นตัวอักษร'); this.value='';}" required>
+            </div>
+            <div class="invalid-tooltip"></div>
+            <div class="col-md-5 mb-3">
+              <label for="validationServer02">นามสกุล</label>
+              <input type="text" class="form-control " id="นามสกุล" placeholder="นามสกุล..." maxlength="50" value=""
+                onKeyUp="if(!(isNaN(this.value))) { alert('โปรดใส่นามสกุลเป็นตัวอักษร'); this.value='';}" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <p class="text-center" style="font-size: 17px;">ผู้ปกครองของนักศึกษาดังกล่าวข้างต้น ได้รับทราบการขอลาพักการศึกษาแล้ว และยินดีให้ปฏิบัติตามความประสงค์ของนักศึกษา
+                จึงเรียนมาเพื่อโปรดทราบ</p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="formFile" class="form-label">อัปโหลดลายเซ็นผู้ปกครอง</label>
+              <input class="form-control" type="file" id="FileSignature" >
+            </div>
+          </div>
+          <p>ขั้นตอนการเสนอคําร้องลาพักการศึกษา<br>
+            1. นักศึกษากรอกคําร้องขอลาพักการศึกษา<br>
+            2. เสนอคําร้องต่อหัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ<br>
+            3. เสนอคําร้องต่อผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ (ชั้น 3 อาคารอํานวย ยศสุข)<br>
+            4. เสนอคําร้องต่ออาจารย2ที่ปรึกษา (คณะที่นักศึกษาสังกัด)<br>
+            5. เสนอคําร้องต่อประธานคณะกรรมการประจําหลักสูตร (คณะที่นักศึกษาสังกัด)<br>
+            6. เสนอคําร้องต่อคณบดี เพื่ออนุมัติ (คณะที่นักศึกษาสังกัด)<br>
+            7. นําคําร้องไปชําระเงิน (กองคลัง ชั้น 2 อาคารอิงคศรีกสิการ)<br>
+            8. นําคําร้องขอลาพักการศึกษา ที่ชําระเงินแล้ว (ยื่นต่อกลุ่มภารกิจทะเบียนเรียนฯ)<br>
+            เพื่อบันทึกฐานข้อมูลนักศึกษาต่อไป<br>
+            9. เจ้าหน้าที่ทะเบียนฯ บันทึกลงฐานข้อมูล นักศึกษาสามารถตรวจสอบได้ในวันต่อไป </p>
 
 
 
+          <!-- ส่วนผู้ปกครองจบ -->
+
+          <div class="form-group">
+          </div>
+          <button class="btn btn-primary"  type="submit">ตกลง</button>
+      </div>
+    </form>
+
+
+  </section>
 </body>
 
 </html>
